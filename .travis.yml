@@ -34,7 +34,48 @@ matrix:
       dist: bionic
       compiler: clang
       sudo: required
-
+      # added power support arch ppc64le.
+      
+    - os: linux
+      dist: precise
+      compiler: gcc
+      sudo: required
+      arch: ppc64le
+    - os: linux
+      dist: precise
+      compiler: clang
+      sudo: required
+      arch: ppc64le
+    - os: linux
+      dist: trusty
+      compiler: gcc
+      sudo: required
+      arch: ppc64le
+    - os: linux
+      dist: trusty
+      compiler: clang
+      sudo: required
+      arch: ppc64le
+    - os: linux
+      dist: xenial
+      compiler: gcc
+      sudo: required
+      arch: ppc64le
+    - os: linux
+      dist: xenial
+      compiler: clang
+      sudo: required
+      arch: ppc64le
+    - os: linux
+      dist: bionic
+      compiler: gcc
+      sudo: required
+      arch: ppc64le
+    - os: linux
+      dist: bionic
+      compiler: clang
+      sudo: required
+      arch: ppc64le
 script:
   - sudo -E apt-get install fakeroot
   - sudo -E make install-build-pkgs
